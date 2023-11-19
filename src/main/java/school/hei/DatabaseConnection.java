@@ -8,7 +8,7 @@ public class DatabaseConnection {
 
     private static Connection connection;
 
-    private DatabaseConnection(){
+    public DatabaseConnection(){
 
         try{
             connection =  DriverManager.getConnection(System.getenv("URL"),System.getenv("DB_USER"),System.getenv("DB_PASSWORD")
