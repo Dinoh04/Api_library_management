@@ -1,4 +1,4 @@
-package school.hei;
+package school.hei.Model;
 
 public class Author {
     private int authorId;
@@ -33,5 +33,14 @@ public class Author {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "authorId=" + authorId +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
     }
 }

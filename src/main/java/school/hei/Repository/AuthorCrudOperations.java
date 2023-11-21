@@ -1,6 +1,6 @@
 package school.hei.Repository;
 
-import school.hei.Author;
+import school.hei.Model.Author;
 
 import java.sql.*;
 import java.util.ArrayList;

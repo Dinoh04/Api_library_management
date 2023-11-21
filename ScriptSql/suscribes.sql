@@ -1,5 +1,7 @@
 CREATE TABLE IF NOT EXISTS Subscribers (
-    subscriber_id SERIAL PRIMARY KEY,
-    subscriber_name VARCHAR(100) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    dateOfBirth DATE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    reference VARCHAR(255) NOT NULL
 );

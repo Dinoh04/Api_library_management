@@ -1,23 +1,28 @@
-package school.hei;
+package school.hei.Model;
+
+import school.hei.topic_enum;
 
 import java.sql.Date;
+
 
 public class Book {
     private int iDBook;
     private String bookName;
     private int pageNumbers;
-    private String topic;
-    private java.sql.Date releaseDate;
+    private topic_enum topic;
+    private Date releaseDate;
     private boolean availibility;
+    private int authorId;
 
 
-    public Book(int iDBook, String bookName, int pageNumbers, String topic, java.sql.Date releaseDate, boolean availibility) {
+    public Book(int iDBook, String bookName, int pageNumbers, topic_enum topic, Date releaseDate, boolean availibility, int authorId) {
         this.iDBook = iDBook;
         this.bookName = bookName;
         this.pageNumbers = pageNumbers;
         this.topic = topic;
         this.releaseDate = releaseDate;
         this.availibility = availibility;
+        this.authorId = authorId;
     }
 
     public int getiDBook() {
@@ -44,11 +49,11 @@ public class Book {
         this.pageNumbers = pageNumbers;
     }
 
-    public String getTopic() {
+    public topic_enum getTopic() {
         return topic;
     }
 
-    public void setTopic(String topic) {
+    public void setTopic(topic_enum topic) {
         this.topic = topic;
     }
 
@@ -66,5 +71,26 @@ public class Book {
 
     public void setAvailibility(boolean availibility) {
         this.availibility = availibility;
+    }
+
+    public int getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "iDBook=" + iDBook +
+                ", bookName='" + bookName + '\'' +
+                ", pageNumbers=" + pageNumbers +
+                ", topic='" + topic + '\'' +
+                ", releaseDate=" + releaseDate +
+                ", availibility=" + availibility +
+                ", authorId=" + authorId +
+                '}';
     }
 }
